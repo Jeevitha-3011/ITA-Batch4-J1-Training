@@ -1,0 +1,61 @@
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("GV Restaurant");
+        System.out.println("1. Juice");
+        System.out.println("2. Biriyani");
+        System.out.println("3. Dessert");
+        System.out.print("Enter choice: ");
+        int ch = sc.nextInt();
+        int price = 0;
+        String item = "";
+        if (ch == 1) {
+            System.out.println("1. Apple Juice - 50");
+            System.out.println("2. Mango Juice - 60");
+            System.out.println("3. Grapes juice - 30");
+            int c = sc.nextInt();
+
+            if (c == 1) {
+                item = "Apple Juice";
+                price = 50;
+            } else if (c == 2){
+                item = "Mango Juice";
+                price = 60;
+            }
+            else {
+                item = "Grapes Juice";
+                price = 30;
+            }
+        } else if (ch == 2) {
+            System.out.println("1. Chicken Biriyani - 150");
+            System.out.println("2. Mutton Biriyani - 200");
+            int c = sc.nextInt();
+            if (c == 1) {
+                item = "Chicken Biriyani";
+                price = 150;
+            } else {
+                item = "Mutton Biriyani";
+                price = 200;
+            }
+        } else if (ch == 3) {
+            System.out.println("1. Ice Cream - 40");
+            System.out.println("2. Choco Ice Cream - 60");
+            int c = sc.nextInt();
+            if (c == 1) {
+                item = "Ice Cream";
+                price = 40;
+            } else {
+                item = "Choco Ice Cream";
+                price = 60;
+            }
+        } else {
+            System.out.println("Food not available");
+            return;
+        }
+        System.out.print("Quantity: ");
+        int q = sc.nextInt();
+        System.out.println("Item: " + item);
+        System.out.println("Amount: " + (price * q));
+    }
+}
