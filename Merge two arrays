@@ -1,0 +1,34 @@
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int asize = sc.nextInt();
+        int[] a = new int[asize];
+
+        for (int i = 0; i < asize; i++) {
+            a[i] = sc.nextInt();
+        }
+
+        int bsize = sc.nextInt();
+        int[] b = new int[bsize];
+
+        for (int i = 0; i < bsize; i++) {
+            b[i] = sc.nextInt();
+        }
+        int csize = asize + bsize;
+        int[] c = new int[csize];
+        for (int i = 0; i < asize; i++) {
+            c[i] = a[i];
+        }
+        for (int i = 0; i < bsize; i++) {
+            c[asize + i] = b[i];
+        }
+        for (int i = 0; i < csize; i++) {
+            System.out.print(c[i] + " ");
+        }
+        sc.close();
+    }
+}
