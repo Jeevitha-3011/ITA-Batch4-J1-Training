@@ -1,0 +1,34 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        
+        System.out.print("Enter a string: ");
+        String word = sc.nextLine();
+
+       
+        int countA = 0, countE = 0, countI = 0, countO = 0, countU = 0;
+
+       
+        for (int i = 0; i < word.length(); i++) {
+            char ch = word.charAt(i);
+            switch (ch) {
+                case 'a': case 'A': countA++; break;
+                case 'e': case 'E': countE++; break;
+                case 'i': case 'I': countI++; break;
+                case 'o': case 'O': countO++; break;
+                case 'u': case 'U': countU++; break;
+            }
+        }
+
+        
+        if (countA > 0) System.out.println("A - " + countA);
+        if (countE > 0) System.out.println("E - " + countE);
+        if (countI > 0) System.out.println("I - " + countI);
+        if (countO > 0) System.out.println("O - " + countO);
+        if (countU > 0) System.out.println("U - " + countU);
+
+        sc.close();
+    }
+}
