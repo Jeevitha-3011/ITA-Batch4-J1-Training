@@ -1,0 +1,43 @@
+
+
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        int n = sc.nextInt();
+
+        int a[] = new int[n];
+        int b[] = new int[n];
+
+        HashMap<Integer, Integer> map1 = new HashMap<>();
+        HashMap<Integer, Integer> map2 = new HashMap<>();
+
+        // First array
+        for (int i = 0; i < n; i++) {
+            a[i] = sc.nextInt();
+
+            if (map1.containsKey(a[i]))
+                map1.put(a[i], map1.get(a[i]) + 1);
+            else
+                map1.put(a[i], 1);
+        }
+
+        // Second array
+        for (int i = 0; i < n; i++) {
+            b[i] = sc.nextInt();
+
+            if (map2.containsKey(b[i]))
+                map2.put(b[i], map2.get(b[i]) + 1);
+            else
+                map2.put(b[i], 1);
+        }
+
+        if (map1.equals(map2))
+            System.out.println("Arrays are equal");
+        else
+            System.out.println("Arrays are not equal");
+    }
+}
