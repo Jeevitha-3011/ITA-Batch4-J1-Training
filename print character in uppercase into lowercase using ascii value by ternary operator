@@ -1,0 +1,23 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter a single character: ");
+        String input = sc.nextLine();
+
+        
+        if (input.length() != 1) {
+            System.out.println("Error: Please enter exactly one character.");
+            return;
+        }
+
+        char ch = input.charAt(0);
+
+        
+        char result = (ch >= 'A' && ch <= 'Z') ? (char) (ch + 32) : ch;
+
+        System.out.println("Converted character: " + result);
+    }
+}
