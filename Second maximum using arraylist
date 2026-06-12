@@ -1,0 +1,30 @@
+import java.util.ArrayList;
+class Main {
+    public static void main (String[] args) {
+      	ArrayList<Integer> a = new ArrayList<>();
+      	a.add(1);
+      	a.add(2);
+      	a.add(3);
+      	a.add(4);
+      	a.add(5);
+      	a.add(6);
+      	a.add(7);
+      	a.add(8);
+      	a.add(9);
+      	a.add(10);
+      	int largest = 0;
+      	int smallest = 0;
+      	for(int i=0;i<a.size();i++){
+      	    a.get(i);
+      	    if(a.get(i)>largest){
+      	    smallest = largest;
+      	    largest = a.get(i);
+      	    }
+      	    else if(a.get(i)>smallest && a.get(i)<largest){
+      	        smallest = a.get(i);
+      	    }
+      	    
+      	}
+      	System.out.println("The second largest element is :" + smallest);
+    }
+}
