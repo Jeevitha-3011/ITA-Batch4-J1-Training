@@ -1,0 +1,22 @@
+import java.util.ArrayList;
+class Main {
+    public static void main (String[] args) {
+      	ArrayList<Integer> a = new ArrayList<>();
+      	ArrayList<Integer> b = new ArrayList<>();
+      	a.add(1);
+      	a.add(2);
+      	a.add(3);
+      	a.add(1,5);
+      	a.add(0,10);
+      	a.remove(1);
+      	a.set(0,5);
+      	System.out.println(a);
+      	System.out.println(a.get(0));
+      	/*a.clear();
+      	System.out.println(a);*/
+      	System.out.println(a.size());
+      	System.out.println(a.contains(2));
+      	b=(ArrayList<Integer>) a.clone();
+      	System.out.println(b);
+    }
+}
