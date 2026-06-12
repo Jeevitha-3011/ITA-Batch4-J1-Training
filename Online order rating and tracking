@@ -1,0 +1,73 @@
+import java.util.Scanner;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner sc = new Scanner(System.in);
+	    System.out.println("Enter order1 rating : ");
+	    int a = sc.nextInt();
+	    if(a<1 || a>5){
+	        System.out.println("Invalid and please enter the correct input from 1 to 5");
+	        System.out.println("Enter order1 rating again : ");
+	        int anew = sc.nextInt();
+	    }
+	    System.out.println("Enter order2 rating : ");
+	    int b = sc.nextInt();
+	    if(b<1 || b>5){
+	        System.out.println("Invalid and please enter the correct input from 1 to 5");
+	        System.out.println("Enter order2 rating again : ");
+	        int bnew = sc.nextInt();
+	    }
+	    System.out.println("Enter order3 rating : ");
+	    int c = sc.nextInt();
+	    if(c<1 || c>5){
+	        System.out.println("Invalid and please enter the correct input from 1 to 5");
+	        System.out.println("Enter order3 rating again : ");
+	        int cnew = sc.nextInt();
+	    }
+	    System.out.println("Enter order4 rating : ");
+	    int d = sc.nextInt();
+	    if(d<1 || d>5){
+	        System.out.println("Invalid and please enter the correct input from 1 to 5");
+	        System.out.println("Enter order4 rating again : ");
+	        int dnew = sc.nextInt();
+	    }
+	    System.out.println("Enter order5 rating : ");
+	    int e = sc.nextInt();
+	    if(e<1 || e>5){
+	        System.out.println("Invalid and please enter the correct input from 1 to 5");
+	        System.out.println("Enter order5 rating again : ");
+	        int enew = sc.nextInt();
+	    }
+	    double mean = (a+b+c+d+e)/5;
+	    System.out.println(mean);
+	        if(mean>=3.8){
+	            System.out.println("You get an offer");
+	            
+	        }
+	        else{
+	            System.out.println("You are not eligible for an offer");
+	        }
+	        System.out.println("Track your order : ");
+	            int num = sc.nextInt();
+	            if(num==1){
+	                System.out.println("preparing your order");
+	            }
+	            else if(num==2){
+	                System.out.println("order is ready");
+	            }
+	            else if(num==3){
+	                System.out.println("out for delivery");
+	            }
+	            else if(num==4){
+	                System.out.println("Reached your house");
+	            }
+	            else if(num==5){
+	                System.out.println("Delivered");
+	            }
+	            else{
+	                System.out.println("Invalid");
+	            }
+	        }
+	    }
+	    
+	
