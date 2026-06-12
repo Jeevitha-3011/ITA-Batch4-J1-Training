@@ -1,0 +1,39 @@
+import java.util.Scanner;
+
+class Main {
+    public static void main(String args[]) {
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter a string: ");
+        String s = sc.next();
+
+        String first = "";
+
+        System.out.println("Palindrome Substrings:");
+
+        for (int i = 0; i < s.length(); i++) {
+
+            for (int j = i + 1; j <= s.length(); j++) {
+
+                String sub = s.substring(i, j);
+
+                String rev = "";
+
+                for (int k = sub.length() - 1; k >= 0; k--) {
+                    rev = rev + sub.charAt(k);
+                }
+
+                if (sub.equals(rev) && sub.length() > 1) {
+                    System.out.println(sub);
+
+                    if (first.equals("")) {
+                        first = sub;
+                    }
+                }
+            }
+        }
+
+        System.out.println("First palindrome substring = " + first);
+    }
+}
