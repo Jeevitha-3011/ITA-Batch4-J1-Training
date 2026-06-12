@@ -1,0 +1,22 @@
+import java.util.ArrayList;
+class Main {
+    public static void main(String[] args) {
+        ArrayList<String> a = new ArrayList<>();
+        ArrayList<String> b = new ArrayList<>();
+        a.add("Apple");
+        a.add("Banana");
+        a.add("Cherry");
+        a.add(1, "Mango");
+        a.add(0, "Orange");
+        a.remove(1);
+        a.set(0, "Grapes");
+        System.out.println(a);
+        System.out.println(a.get(0));
+        // a.clear();
+        // System.out.println(a);
+        System.out.println(a.size());
+        System.out.println(a.contains("Banana"));
+        b = (ArrayList<String>) a.clone();
+        System.out.println(b);
+    }
+}
