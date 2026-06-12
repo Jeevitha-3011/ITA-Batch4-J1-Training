@@ -1,0 +1,15 @@
+import java.util.Scanner;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner sc = new Scanner(System.in);
+	    String s = sc.nextLine();
+	    String rev = new StringBuilder(s).reverse().toString();
+	    if(s== rev){
+	        System.out.println("palindrome");
+	    }
+	    else{
+	        System.out.println("not a palindrome");
+	    }
+	}
+}
