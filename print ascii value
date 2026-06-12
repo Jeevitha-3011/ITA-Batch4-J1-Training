@@ -1,0 +1,16 @@
+import java.util.Scanner;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner sc = new Scanner(System.in);
+	    int sum=0;
+	    char m = sc.next().charAt(0);
+	    if(m<='A'&&m>='Z'){
+	        sum=m+32;
+	    }
+	    else{
+	        sum=m;
+	    }
+		System.out.println(sum);
+	}
+}
