@@ -1,0 +1,19 @@
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	/*Scanner sc = new Scanner(System.in);*/
+	Set<Integer> a = new TreeSet<>();
+	a.add(10);
+	a.add(20);
+	a.add(10);
+	a.add(30);
+	System.out.println(a);
+	System.out.println(a.size());
+	System.out.println(a.isEmpty());
+	System.out.println(a.contains(10));
+	
+	}
+}
+
+
